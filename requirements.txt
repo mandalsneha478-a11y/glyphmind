@@ -1,0 +1,25 @@
+# ============================================================================
+#  GLYPHMIND — Spatial RAG for Text-Native Art
+#  Python dependencies.  Everything runs 100% locally; no API keys required.
+# ============================================================================
+
+# --- Web layer -------------------------------------------------------------
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+
+# --- Numeric / retrieval ---------------------------------------------------
+numpy>=1.26.0
+scipy>=1.11.0
+scikit-learn>=1.4.0
+networkx>=3.2
+
+# --- Typography ------------------------------------------------------------
+pyfiglet>=1.0.2
+
+# --- Pre-built local embedding model (downloads ~90 MB once, then offline) --
+# If this is unavailable the system transparently falls back to a built-in
+# hashed-ngram + SVD encoder.  Nothing breaks.
+sentence-transformers>=2.6.0
+torch>=2.1.0
